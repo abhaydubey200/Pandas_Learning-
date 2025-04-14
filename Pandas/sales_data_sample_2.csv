@@ -1,0 +1,6 @@
+Date,Region,Product,Price,Quantity,Total,PaymentMethod,CustomerType,SalesManager,InvoiceNo
+2024-02-01,Central,Product X,90.0,3.0,270.0,Card,Wholesale,Manager6,6
+2024-02-02,North,Product Y,,2.0,,UPI,Retail,,7
+2024-02-03,,Product Z,110.0,5.0,550.0,,Retail,Manager8,8
+2024-02-04,East,,140.0,,420.0,Cash,Wholesale,Manager9,9
+2024-02-05,South,Product W,130.0,4.0,520.0,Card,,Manager10,10

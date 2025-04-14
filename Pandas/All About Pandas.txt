@@ -1,15 +1,12 @@
 Here’s a complete and super practical list of all essential pandas functions and methods used in data analysis — beginner to advanced — covering data wrangling, cleaning, EDA, grouping, filtering, merging, time series, and more. 🧠
 
 🧩 1. Basic Setup
-python
-Copy
-Edit
+
 import pandas as pd
 df = pd.read_csv("your_file.csv")  # Load data
+
 📊 2. Data Exploration
-python
-Copy
-Edit
+
 df.head()                  # First 5 rows
 df.tail()                  # Last 5 rows
 df.shape                  # (rows, columns)
@@ -18,10 +15,9 @@ df.dtypes                 # Data types of each column
 df.info()                 # Summary of dataframe
 df.describe()             # Stats for numerical columns
 df.memory_usage()         # Memory usage per column
+
 🧹 3. Data Cleaning
-python
-Copy
-Edit
+
 df.isnull().sum()         # Count missing values
 df.dropna()               # Drop missing values
 df.fillna(value)          # Fill missing with a value
@@ -30,25 +26,24 @@ df.drop_duplicates()      # Drop duplicates
 df.replace("old", "new")  # Replace values
 df.rename(columns={"old": "new"})  # Rename columns
 df.astype({'col': 'int'}) # Convert datatype
+
 🧮 4. Column & Row Operations
-python
-Copy
-Edit
+
 df['new_col'] = df['col1'] + df['col2']      # Add new column
 df.drop('col', axis=1)                       # Drop column
 df.drop([0,1], axis=0)                       # Drop rows by index
 df['col'].apply(func)                        # Apply function
 df.applymap(func)                            # Element-wise function on DataFrame
 df['col'].map(mapping_dict)                  # Map values
+
 🧼 5. Filtering & Selection
-python
-Copy
-Edit
+
 df[df['col'] > 100]                         # Filter rows
 df[(df['A'] > 10) & (df['B'] < 50)]         # Multiple conditions
 df.loc[0:5, ['col1', 'col2']]               # Label-based selection
 df.iloc[0:5, 0:2]                           # Position-based selection
 df.query('col > 100')                       # SQL-style filtering
+
 📚 6. Grouping & Aggregation
 
 df.groupby('col').sum()                    # Group & sum
