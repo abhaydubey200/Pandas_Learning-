@@ -1,0 +1,9 @@
+UndeStand the dataset...
+Identify the Problems...
+.head()
+.info()
+plan to next Steps...
+Select a row for specific task
+combine row 
+filter row
+
