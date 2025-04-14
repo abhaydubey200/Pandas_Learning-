@@ -1,0 +1,91 @@
+Here’s a complete and super practical list of all essential pandas functions and methods used in data analysis — beginner to advanced — covering data wrangling, cleaning, EDA, grouping, filtering, merging, time series, and more. 🧠
+
+🧩 1. Basic Setup
+python
+Copy
+Edit
+import pandas as pd
+df = pd.read_csv("your_file.csv")  # Load data
+📊 2. Data Exploration
+python
+Copy
+Edit
+df.head()                  # First 5 rows
+df.tail()                  # Last 5 rows
+df.shape                  # (rows, columns)
+df.columns                # List of column names
+df.dtypes                 # Data types of each column
+df.info()                 # Summary of dataframe
+df.describe()             # Stats for numerical columns
+df.memory_usage()         # Memory usage per column
+🧹 3. Data Cleaning
+python
+Copy
+Edit
+df.isnull().sum()         # Count missing values
+df.dropna()               # Drop missing values
+df.fillna(value)          # Fill missing with a value
+df.duplicated()           # Check duplicates
+df.drop_duplicates()      # Drop duplicates
+df.replace("old", "new")  # Replace values
+df.rename(columns={"old": "new"})  # Rename columns
+df.astype({'col': 'int'}) # Convert datatype
+🧮 4. Column & Row Operations
+python
+Copy
+Edit
+df['new_col'] = df['col1'] + df['col2']      # Add new column
+df.drop('col', axis=1)                       # Drop column
+df.drop([0,1], axis=0)                       # Drop rows by index
+df['col'].apply(func)                        # Apply function
+df.applymap(func)                            # Element-wise function on DataFrame
+df['col'].map(mapping_dict)                  # Map values
+🧼 5. Filtering & Selection
+python
+Copy
+Edit
+df[df['col'] > 100]                         # Filter rows
+df[(df['A'] > 10) & (df['B'] < 50)]         # Multiple conditions
+df.loc[0:5, ['col1', 'col2']]               # Label-based selection
+df.iloc[0:5, 0:2]                           # Position-based selection
+df.query('col > 100')                       # SQL-style filtering
+📚 6. Grouping & Aggregation
+
+df.groupby('col').sum()                    # Group & sum
+df.groupby(['col1', 'col2']).mean()        # Multiple columns
+df['col'].value_counts()                   # Count frequency
+df.pivot_table(values='total', index='gender', columns='branch', aggfunc='sum')
+
+🔁 7. Sorting
+
+df.sort_values(by='col', ascending=False)  # Sort by values
+df.sort_index()                            # Sort by index
+
+🔗 8. Merging & Joining
+
+pd.concat([df1, df2])                      # Combine along rows
+pd.merge(df1, df2, on='key')               # Merge on key
+df1.join(df2, lsuffix='_left', rsuffix='_right')  # Join by index
+
+🕒 9. Time Series & Date
+
+df['Date'] = pd.to_datetime(df['Date'])     # Convert to datetime
+df['year'] = df['Date'].dt.year
+df['month'] = df['Date'].dt.month_name()
+df.set_index('Date', inplace=True)          # Use date as index
+df.resample('M').sum()                      # Monthly resample
+
+📊 10. Visualization (with Matplotlib/Seaborn)
+
+df['col'].plot(kind='line')                 # Line chart
+df['col'].plot(kind='hist')                 # Histogram
+df.plot(kind='bar', x='col1', y='col2')     # Bar chart
+df.plot(kind='box')                         # Box plot
+
+📦 11. Export Data
+
+df.to_csv("output.csv", index=False)
+df.to_excel("output.xlsx", index=False)
+df.to_json("output.json")
+
+
