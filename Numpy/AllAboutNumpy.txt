@@ -1,0 +1,88 @@
+📘 What is NumPy?
+
+NumPy (Numerical Python) is a powerful Python library used for:
+Fast mathematical operations on large datasets
+Efficient multi-dimensional arrays (ndarray)
+Linear algebra, statistics, and data preprocessing
+It's the foundation for Pandas, SciPy, Scikit-learn, etc.
+
+📐 Core Concepts (Theory)
+
+Concept	Description
+ndarray	Core data structure — fast, fixed-size, homogeneous elements
+Broadcasting	Auto-expand shapes for operations (e.g., matrix + scalar)
+Vectorization	Fast computations without for loops
+Memory efficiency	Much faster and memory-efficient than native Python lists
+
+⚙️ How to Use NumPy
+                                                                      ✅ Importing NumPy
+                                                                        import numpy as np
+🧱 Creating Arrays
+np.array([1, 2, 3])                      # 1D array
+np.array([[1, 2], [3, 4]])               # 2D array
+np.zeros((2, 3))                         # Array of zeros
+np.ones((3, 2))                          # Array of ones
+np.full((2, 2), 7)                       # Array of sevens
+np.eye(3)                                # Identity matrix
+np.arange(0, 10, 2)                      # Range with step
+np.linspace(0, 1, 5)                     # 5 numbers from 0 to 1
+
+🔁 Array Operations
+arr.shape                                # Dimensions
+arr.size                                 # Total elements
+arr.ndim                                 # Number of dimensions
+arr.dtype                                # Data type
+arr.reshape(2, 3)                        # Change shape
+arr.flatten()                            # 2D to 1D
+
+🔄 Indexing, Slicing, Filtering
+arr[0], arr[-1]                          # Indexing
+arr[1:4]                                 # Slicing
+arr[arr > 5]                             # Boolean filtering
+arr[::2]                                 # Step slicing
+
+🧮 Math Operations (Element-wise)
+np.add(a, b), a + b                      # Addition
+np.subtract(a, b), a - b                 # Subtraction
+np.multiply(a, b), a * b                 # Multiplication
+np.divide(a, b), a / b                   # Division
+np.power(a, 2)                           # Exponentiation
+
+📊 Aggregation Functions
+np.sum(arr), np.mean(arr), np.std(arr)
+np.min(arr), np.max(arr), np.median(arr)
+np.argmin(arr), np.argmax(arr)
+np.cumsum(arr), np.cumprod(arr)
+
+🔧 Advanced Functions
+np.sort(arr)                             # Sorting
+np.unique(arr)                           # Unique values
+np.concatenate([a, b], axis=0)           # Row-wise concat
+np.vstack((a, b)), np.hstack((a, b))     # Stack arrays
+
+🧠 Linear Algebra (useful in advanced DA/ML)
+np.dot(a, b)                             # Dot product
+np.linalg.inv(matrix)                   # Inverse
+np.linalg.det(matrix)                   # Determinant
+np.linalg.eig(matrix)                   # Eigenvalues
+
+📅 Real Data Analysis Examples with NumPy
+Task	NumPy Usage
+Data Cleaning:	Replace, filter, reshape arrays
+Preprocessing:	Normalize, scale, encode values
+Feature Engineering:	Create numerical features
+Statistics:	Mean, median, std deviation
+Efficiency:	Handle millions of rows quickly
+
+🧠 Bonus: Interview-style Questions
+1. What’s the difference between a list and a NumPy array?
+How does broadcasting work in NumPy?
+Why is vectorization better than loops in NumPy?
+How do you compute row-wise mean of a matrix?
+What are some use cases of np.where()?
+
+
+
+
+
+

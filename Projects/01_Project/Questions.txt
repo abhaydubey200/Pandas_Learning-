@@ -1,0 +1,26 @@
+Project Tasks:
+
+
+
+🔹 Data Cleaning
+Handle missing values (if any)
+Rename columns for consistency
+Drop irrelevant columns
+
+🔹 Exploratory Data Analysis (EDA)
+Top 10 most common job titles
+Average purchase price
+Highest and lowest purchase price
+Number of people using MasterCard and charged over 50
+Count of users with email provider gmail.com
+Expiring cards in year 2025
+
+🔹 NumPy Practice (within the same project)
+Convert column values (like price) into NumPy arrays
+Perform statistical operations using NumPy (mean, std, max, argmax, etc.)
+Normalize the purchase prices using NumPy
+
+Create a function that filters data based on country and purchase amount
+Export filtered data to a new CSV
+
+
